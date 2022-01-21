@@ -1,16 +1,30 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'selima';
+        src: url('/fonts/selima.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    
+    }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* Only use Navbar background after scrolling down OR on mobile */
+/* This is definitely the wrong way to do this */
+@media only screen and (min-width: 768px) {
+    .header-dark-bg {
+        background-color: #000000d9;
+        backdrop-filter: blur(2px);
+    }
 }
-
-* {
-  box-sizing: border-box;
+@media only screen and (max-width: 768px) {
+    .header-dark-bg-mobile {
+        background-color: #000000d9;
+        backdrop-filter: blur(2px);
+    }
 }
