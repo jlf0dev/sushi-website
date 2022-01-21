@@ -39,12 +39,12 @@ const Home: NextPage = () => {
             Selected Menu
           </h2>
         </div>
-        <div className="md:w-1/2 flex items-center">
-          <div className="pr-[25%] pt-[25%] pb-[25%] bg-[url('../public/bg-splash-2.png')] bg-no-repeat bg-cover">
+        <div className="w-full md:w-1/2 md:order-2 flex items-center">
+          <div className="w-full pr-[25%] pt-[25%] pb-[25%] bg-[url('../public/bg-splash-2.png')] bg-no-repeat bg-cover">
             <Image src={sushiPic2} alt="Picture of Sushi" />
           </div>
         </div>
-        <div className="md:w-1/2 p-[5%]">
+        <div className="md:w-1/2 p-[5%] md:order-1">
           <h4 className="text-4xl pb-10">Appetizers</h4>
           <span className="border-t-black w-10 h-10"/>
           <div className="grid grid-cols-2 gap-y-10">
@@ -79,9 +79,9 @@ const Home: NextPage = () => {
           </div>
         </div>
         {/* Combos */}
-        <div className="flex flex-col md:flex-row flex-wrap pt-[5%] items-center justify-center">
-          <div className="md:w-1/2 flex justify-center md:order-2">
-            <Image src={sushiPic3} alt="Picture of Sushi" />
+        <div className="flex flex-col md:flex-row md:order-3 flex-wrap pt-[5%] items-center justify-center">
+          <div className="md:w-1/2 flex justify-center">
+            <Image src={sushiPic3} alt="Picture of Combos" />
           </div>
           <div className="md:w-1/2 p-[5%]">
             <h4 className="text-4xl pb-10">Combos</h4>

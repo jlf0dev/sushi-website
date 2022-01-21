@@ -46,7 +46,7 @@ export default class Navbar extends Component<{}, NavbarState> {
                 <button className="md:hidden" onClick = {() => this.toggleMenu()}>
                   Show menu
                 </button>
-                <div className={`w-full overflow-hidden transition-all ease duration-300 ${this.state.showMobileNav ? "max-h-96" : "max-h-0 invisible"} md:visible md:max-h-fit md:w-auto`}>
+                <div className={`w-full overflow-hidden transition-all ease duration-500 ${this.state.showMobileNav ? "max-h-96" : "max-h-0 invisible"} md:visible md:max-h-fit md:w-auto`}>
                     <ul className="flex flex-col md:flex-row justify-between items-center gap-14 mt-3 font-light">
                         <li>
                           <a>Home</a>
