@@ -7,6 +7,7 @@ import Hero from '../components/Hero'
 import sushiPic from '../public/sushi-food.png'
 import sushiPic2 from '../public/sushi-food-b.png'
 import sushiPic3 from '../public/sushi-food-d.jpeg'
+import mapPic from '../public/map-location.jpeg'
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +15,7 @@ const Home: NextPage = () => {
       <Navbar/>
       <Hero/>
 
+      {/* The Art of Food */}
       <div className="flex flex-col md:flex-row pt-[5%]">
         <div className="md:w-1/3 flex items-center">
           <div className="pr-[25%] pt-[25%] pb-[25%] bg-[url('../public/bg-splash1-1.png')] bg-no-repeat bg-cover max-w-full">
@@ -33,12 +35,16 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
+      {/* Selected Menu */}
       <div className="flex flex-col md:flex-row flex-wrap pt-[5%] items-center justify-center">
         <div className="text-center w-full">
           <h2 className="font-heading text-7xl">
             Selected Menu
           </h2>
         </div>
+
+        {/* Appetizers */}
         <div className="w-full md:w-1/2 md:order-2 flex items-center">
           <div className="w-full pr-[25%] pt-[25%] pb-[25%] bg-[url('../public/bg-splash-2.png')] bg-no-repeat bg-cover">
             <Image src={sushiPic2} alt="Picture of Sushi" />
@@ -78,6 +84,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
+
         {/* Combos */}
         <div className="flex flex-col md:flex-row md:order-3 flex-wrap pt-[5%] items-center justify-center">
           <div className="md:w-1/2 flex justify-center">
@@ -116,6 +123,29 @@ const Home: NextPage = () => {
                 $49.80
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+      <div className="text-slate-50 bg-black p-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-14 items-center">
+          <div>
+            <p className="font-bold">Sushi</p>
+            <p className="font-light">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores<br /></p>
+          </div>
+          <div>
+            <p className="font-bold">Hours</p>
+            <p className="font-light">MON - FRI: 9AM - 11PM<br />
+            SAT - SUN: 5PM - 2AM<br />
+            Bar open only on weekends<br /></p>
+          </div>
+          <div>
+            <p className="font-bold">Address</p>
+            <p className="font-light">25 Ohio St. Australia,<br />
+            MA (912) 555 - 8900<br />
+            info@themifysushi.com<br /></p>
+          </div>
+          <div>
+            <Image src={mapPic}/>
           </div>
         </div>
       </div>
