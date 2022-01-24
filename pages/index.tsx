@@ -2,17 +2,19 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Navbar from '../components/Navbar'
-import Hero from '../components/Hero'
+import Navbar from '../components/navbar'
+import Hero from '../components/hero'
 import sushiPic from '../public/sushi-food.png'
 import sushiPic2 from '../public/sushi-food-b.png'
 import sushiPic3 from '../public/sushi-food-d.jpeg'
-import mapPic from '../public/map-location.jpeg'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Navbar/>
+    <>
+    <Head>
+      <title>Home - Sushi Template</title>
+    </Head>
+
       <Hero/>
 
       {/* The Art of Food */}
@@ -51,7 +53,7 @@ const Home: NextPage = () => {
           </div>
         </div>
         <div className="md:w-1/2 p-[5%] md:order-1">
-          <h4 className="text-4xl pb-10">Appetizers</h4>
+          <h3 className="text-4xl pb-10">Appetizers</h3>
           <span className="border-t-black w-10 h-10"/>
           <div className="grid grid-cols-2 gap-y-10">
             <div>
@@ -126,30 +128,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="text-slate-50 bg-black p-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-14 items-center">
-          <div>
-            <p className="font-bold">Sushi</p>
-            <p className="font-light">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores<br /></p>
-          </div>
-          <div>
-            <p className="font-bold">Hours</p>
-            <p className="font-light">MON - FRI: 9AM - 11PM<br />
-            SAT - SUN: 5PM - 2AM<br />
-            Bar open only on weekends<br /></p>
-          </div>
-          <div>
-            <p className="font-bold">Address</p>
-            <p className="font-light">25 Ohio St. Australia,<br />
-            MA (912) 555 - 8900<br />
-            info@themifysushi.com<br /></p>
-          </div>
-          <div>
-            <Image src={mapPic}/>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   )
 }
 
