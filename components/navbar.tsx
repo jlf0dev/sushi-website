@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ActiveLink from "./activeLink";
 
 type NavbarState = {
   darkBgClass: string,
@@ -49,16 +50,22 @@ export default class Navbar extends Component<{}, NavbarState> {
                 <div className={`w-full overflow-hidden transition-all ease duration-500 ${this.state.showMobileNav ? "max-h-96" : "max-h-0 invisible"} md:visible md:max-h-fit md:w-auto`}>
                     <ul className="flex flex-col md:flex-row justify-between items-center gap-14 mt-3 font-light">
                         <li>
-                          <a>Home</a>
+                          <ActiveLink href="/" activeClassName="text-[#ffba00]">
+                            <a>Home</a>
+                          </ActiveLink>
                         </li>
                         <li>
-                          <a>About</a>
+                          <ActiveLink href="/about" activeClassName="text-[#ffba00]">
+                            <a>About</a>
+                          </ActiveLink>
                         </li>
                         <li>
-                          <a>Menu</a>
+                          <ActiveLink href="/menu" activeClassName="text-[#ffba00]">
+                            <a>Menu</a>
+                          </ActiveLink>
                         </li>
                         <li>
-                          <a>Contact</a>
+                          <a href="/contact" className="bg-[#ffba00] clipped-button text-black py-4 px-11 uppercase hover:bg-black hover:text-slate-50 font-bold">Contact</a>
                         </li>
                     </ul>
                 </div>

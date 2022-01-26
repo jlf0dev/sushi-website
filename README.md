@@ -1,3 +1,11 @@
+Hosted on vercel: https://sushi-website-silk.vercel.app/
+
+Features
+- Optimized for google lighthouse
+- mobile menu
+- component features of react
+___
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
