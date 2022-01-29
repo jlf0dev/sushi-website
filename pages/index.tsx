@@ -1,9 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Navbar from '../components/navbar'
 import Hero from '../components/hero'
+import HeroPic from "../public/hero.jpg";
 import sushiPic from '../public/sushi-food.png'
 import sushiPic2 from '../public/sushi-food-b.png'
 import sushiPic3 from '../public/sushi-food-d.jpeg'
@@ -15,7 +14,7 @@ const Home: NextPage = () => {
       <title>Home - Sushi Template</title>
     </Head>
 
-      <Hero/>
+      <Hero name="Sushi" backgroundImage={HeroPic}/>
 
       {/* The Art of Food */}
       <div className="flex flex-col md:flex-row pt-[5%]">

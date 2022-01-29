@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ActiveLink from "./activeLink";
 
@@ -8,6 +9,9 @@ export default function Navbar() {
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   });
 
   const handleScroll = () => {
@@ -26,7 +30,9 @@ export default function Navbar() {
   return (
     <header className={`fixed px-10 py-3 w-full z-50 transition-all ease-in-out duration-700 header-dark-bg-mobile ${darkBgClass}`}>
       <div className=" max-w-6xl mx-auto flex flex-wrap justify-between text-slate-50">
-        <a><h1 className="text-4xl font-heading">Sushi</h1></a>
+        <Link href="/">
+          <a><h1 className="text-4xl font-heading">Sushi</h1></a>
+        </Link>
         <button className="md:hidden" onClick={() => setshowMobileNav(!showMobileNav)}>
           Show menu
         </button>
@@ -48,7 +54,9 @@ export default function Navbar() {
               </ActiveLink>
             </li>
             <li>
-              <a href="/contact" className="bg-[#ffba00] clipped-button text-black py-4 px-11 uppercase hover:bg-black hover:text-slate-50 font-bold">Contact</a>
+              <Link href="/contact">
+                <a className="bg-[#ffba00] clipped-button text-black py-4 px-11 uppercase hover:bg-black hover:text-slate-50 font-bold">Contact</a>
+              </Link>
             </li>
           </ul>
         </div>
