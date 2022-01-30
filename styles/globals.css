@@ -36,3 +36,13 @@
         backdrop-filter: blur(2px);
     }
 }
+
+.swiper-pagination-bullet-active {
+    background-color: #ffba00 !important;
+}
+.swiper-button-prev {
+    color:#000 !important;
+}
+.swiper-button-next {
+    color: #000 !important; 
+}
