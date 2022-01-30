@@ -14,28 +14,35 @@
     }
 }
 
-.clipped-button {
-    /* -webkit-clip-path: polygon(9% 0%, 100% 0, 100% 70%,88% 100%, 0 100%, 0% 30%); */
-    clip-path: polygon(9% 0%, 100% 0, 100% 70%,88% 100%, 0 100%, 0% 30%);
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 300ms;
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
-}
 
-/* Only use Navbar background after scrolling down OR on mobile */
-/* This is definitely the wrong way to do this */
+
+/* Screen medium and above */
 @media only screen and (min-width: 768px) {
+    /* Only use Navbar background after scrolling down OR on mobile */
+    /* This is definitely the wrong way to do this */
     .header-dark-bg {
         background-color: #000000d9;
         backdrop-filter: blur(2px);
     }
+
+    .clipped-button {
+        /* -webkit-clip-path: polygon(9% 0%, 100% 0, 100% 70%,88% 100%, 0 100%, 0% 30%); */
+        clip-path: polygon(9% 0%, 100% 0, 100% 70%,88% 100%, 0 100%, 0% 30%);
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+        transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;
+    }
 }
+/* Screen mobile and above */
 @media only screen and (max-width: 768px) {
+    /* Only use Navbar background after scrolling down OR on mobile */
+    /* This is definitely the wrong way to do this */
     .header-dark-bg-mobile {
         background-color: #000000d9;
         backdrop-filter: blur(2px);
     }
 }
+
 
 .swiper-pagination-bullet-active {
     background-color: #ffba00 !important;
