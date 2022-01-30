@@ -20,7 +20,7 @@ const Hero: FC<Props> = ({name, backgroundImage, showCTA = true}) => {
             {showCTA && 
               <>
                 <p className="text-2xl mb-7 text-center font-light">Let your senses run riot with our tantalizing asian fusion.</p>
-                <Link href="/">
+                <Link href="/menu">
                   <a className="clipped-button bg-[#ffba00] text-black py-4 px-11 uppercase hover:bg-black hover:text-slate-50 font-bold">See Menu</a>
                 </Link>
               </>

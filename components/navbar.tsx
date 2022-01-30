@@ -3,13 +3,18 @@ import React, { useEffect, useState } from "react";
 import ActiveLink from "./activeLink";
 import { FaBars } from "react-icons/fa"
 import { IconContext } from "react-icons";
+import { useRouter } from "next/router";
 
 
 export default function Navbar() {
+  const router = useRouter()
   const [darkBgClass, setDarkBgClass] = useState("");
   const [showMobileNav, setshowMobileNav] = useState(false);
 
   useEffect(() => {
+    router.events.on('routeChangeStart', (url, { shallow }) => {
+      setshowMobileNav(false);
+    })
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -39,27 +44,26 @@ export default function Navbar() {
         <button className="md:hidden h-fit pr-3 pt-1" onClick={() => setshowMobileNav(!showMobileNav)}>
           <FaBars />
         </button>
-        <div className={`w-full overflow-hidden transition-all ease duration-500 ${showMobileNav ? "max-h-96" : "max-h-0 invisible"} md:visible md:max-h-fit md:w-auto`}>
+        <div className={`w-full overflow-hidden transition-all ease duration-300 ${showMobileNav ? "max-h-96" : "max-h-0 invisible"} md:visible md:max-h-fit md:w-auto`}>
           <ul className="flex flex-col md:flex-row justify-between items-center md:gap-14 font-light text-xl">
             <li className="w-full h-11">
               <ActiveLink href="/" activeClassName="text-[#ffba00]" >
-                <a className="h-full grid place-items-center" onClick={() => setshowMobileNav(!showMobileNav)}>Home</a>
+                <a className="h-full grid place-items-center">Home</a>
               </ActiveLink>
             </li>
             <li className="w-full h-11">
               <ActiveLink href="/about" activeClassName="text-[#ffba00]">
-                <a className="h-full grid place-items-center" onClick={() => setshowMobileNav(!showMobileNav)}>About</a>
+                <a className="h-full grid place-items-center">About</a>
               </ActiveLink>
             </li>
             <li className="w-full h-11">
               <ActiveLink href="/menu" activeClassName="text-[#ffba00]">
-                <a className="h-full grid place-items-center" onClick={() => setshowMobileNav(!showMobileNav)}>Menu</a>
+                <a className="h-full grid place-items-center">Menu</a>
               </ActiveLink>
             </li>
             <li className="w-full h-11 md:h-fit">
               <ActiveLink href="/contact" activeClassName="text-[#ffba00] md:text-black">
-                <a className="md:bg-[#ffba00] clipped-button md:text-black md:py-2 md:px-5 md:uppercase md:hover:bg-black md:hover:text-slate-50 md:font-bold h-full grid place-items-center"
-                  onClick={() => setshowMobileNav(!showMobileNav)}>
+                <a className="md:bg-[#ffba00] clipped-button md:text-black md:py-2 md:px-5 md:uppercase md:hover:bg-black md:hover:text-slate-50 md:font-bold h-full grid place-items-center">
                     Contact
                 </a>
               </ActiveLink>
