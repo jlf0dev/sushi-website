@@ -42,9 +42,9 @@ const combos: Product[] = [
 ]
 
 const partyTrays: Product[] = [
-  { image: "/public/products/party-trays/sushi-tray-a-500x400.jpeg", name: "Party Tray A", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", price: "$80" },
-  { image: "/public/products/party-trays/sushi-tray-b-500x400.jpeg", name: "Party Tray B", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur", price: "$120" },
-  { image: "/public/products/party-trays/sushi-tray-c-500x400.jpeg", name: "Party Tray C", description: "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat", price: "$180" },
+  { image: "/products/party-trays/sushi-tray-a-500x400.jpeg", name: "Party Tray A", description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa", price: "$80" },
+  { image: "/products/party-trays/sushi-tray-b-500x400.jpeg", name: "Party Tray B", description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur", price: "$120" },
+  { image: "/products/party-trays/sushi-tray-c-500x400.jpeg", name: "Party Tray C", description: "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat", price: "$180" },
 ]
 
 export default function Menu() {
